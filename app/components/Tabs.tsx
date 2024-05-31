@@ -6,7 +6,7 @@ import Tabs from '@mui/joy/Tabs';
 import TabList from '@mui/joy/TabList';
 import Tab, { tabClasses } from '@mui/joy/Tab';
 import TabPanel from '@mui/joy/TabPanel';
-
+import BlogCard from "./BlogCard/card"
 export default function TabsPageExample() {
   const [index, setIndex] = React.useState(0);
   return (
@@ -29,7 +29,8 @@ export default function TabsPageExample() {
             overflow: 'auto',
           scrollSnapType: 'x mandatory',
           '&::-webkit-scrollbar': { display: 'none' },
-            pt: 1,
+            // pt: 0,
+          
             
             [`&& .${tabClasses.root}`]: {
               flex: 'initial',
@@ -40,9 +41,9 @@ export default function TabsPageExample() {
               [`&.${tabClasses.selected}`]: {
                 color: 'primary.plainColor',
                 '&::after': {
-                  height: 2,
-                  borderTopLeftRadius: 3,
-                  borderTopRightRadius: 3,
+                  height: 4,
+                  borderTopLeftRadius: 10,
+                  borderTopRightRadius: 10,
                   bgcolor: 'primary.500',
                 },
               },
@@ -62,23 +63,23 @@ export default function TabsPageExample() {
            
           </Tab>
           <Tab indicatorInset sx={{ fontSize: 18 }} >
-          Self Improvement {' '}
+          Scam Alert{' '}
            
           </Tab>
           <Tab indicatorInset sx={{ fontSize: 18 }} >
-          Technology {' '}
+          Monero {' '}
            
           </Tab>
           <Tab indicatorInset sx={{ fontSize: 18 }} >
-          Data Science {' '}
+          Critical Security Vulnerability {' '}
            
           </Tab>
           <Tab indicatorInset sx={{ fontSize: 18 }} >
-          Programming{' '}
+          Dark Web{' '}
            
           </Tab>
           <Tab indicatorInset sx={{ fontSize: 18 }} >
-          Technology {' '}
+          Hacker Leaks {' '}
            
           </Tab>
      
@@ -103,13 +104,17 @@ export default function TabsPageExample() {
 maxWidth="100vw"
 
 
-               sx={{ mt: 0 }}
+               sx={{ mt: 2 }}
               
               >
-          <TabPanel value={0}>Deals</TabPanel>
-          <TabPanel value={1}>Library</TabPanel>
-          <TabPanel value={2}>Products</TabPanel>
-          <TabPanel value={3}>Produnnncts</TabPanel>
+          <TabPanel value={0}><BlogCard/></TabPanel>
+          <TabPanel value={1}><BlogCard/></TabPanel>
+          <TabPanel value={2}><BlogCard/></TabPanel>
+          <TabPanel value={3}><BlogCard/></TabPanel>
+          <TabPanel value={4}><BlogCard/></TabPanel>
+          <TabPanel value={5}><BlogCard/></TabPanel>
+          <TabPanel value={6}><BlogCard/></TabPanel>
+          <TabPanel value={7}><BlogCard/></TabPanel>
           </Box>
         </Box>
       </Tabs>

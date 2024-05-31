@@ -86,7 +86,7 @@ export default function Header() {
         spacing={1}
         sx={{ display: { xs: 'none', sm: 'flex' } }}
       >
-        <IconButton
+        {/* <IconButton
           size="md"
           variant="outlined"
           color="neutral"
@@ -94,9 +94,9 @@ export default function Header() {
             display: { xs: 'none', sm: 'inline-flex' },
             borderRadius: '50%',
           }}
-        >
-          <LanguageRoundedIcon />
-        </IconButton>
+        > */}
+       <img src="./icon.png"  width="100" height="50"/>
+        {/* </IconButton> */}
         {/* <Button
           variant="plain"
           color="neutral"
@@ -139,7 +139,7 @@ export default function Header() {
           onClose={() => setOpen(false)}
         >
           <ModalClose />
-          <DialogTitle>Acme Co.</DialogTitle>
+          <DialogTitle>Blo9</DialogTitle>
           <Box sx={{ px: 1 }}>
             {/* <Navigation /> */}
           </Box>
@@ -211,7 +211,7 @@ export default function Header() {
             <NotificationsNoneOutlinedIcon />
           </IconButton>
        
-        {/* <ColorSchemeToggle /> */}
+        <ColorSchemeToggle />
         <Dropdown>
           <MenuButton
             variant="plain"
