@@ -13,7 +13,7 @@ export default function BasicChip() {
   return (
     <>
      <Typography sx={{mt:3}}level="title-sm">Who to follow</Typography>
-     <Box sx={{ width: 400 }}>
+     <Box sx={{ width: 600 }}>
      
       <List
         aria-labelledby="ellipsis-list-demo"
@@ -27,7 +27,7 @@ export default function BasicChip() {
             <Typography level="title-sm">
 Bella L</Typography>
             <Typography level="body-sm" noWrap>
-            👑 Your imperial mathematician & story teller |
+             Your imperial mathematician & story teller |
             </Typography>
           </ListItemContent>
         </ListItem>

@@ -9,13 +9,13 @@ import Link from '@mui/joy/Link';
 import Stack from '@mui/joy/Stack';
 import Typography from '@mui/joy/Typography';
 import WorkspacePremiumRoundedIcon from '@mui/icons-material/WorkspacePremiumRounded';
-import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
+import BookmarkAddOutlinedIcon from '@mui/icons-material/BookmarkAddOutlined';
 import FmdGoodRoundedIcon from '@mui/icons-material/FmdGoodRounded';
 import KingBedRoundedIcon from '@mui/icons-material/KingBedRounded';
 import WifiRoundedIcon from '@mui/icons-material/WifiRounded';
 import Star from '@mui/icons-material/Star';
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
-
+import HourglassTopOutlinedIcon from '@mui/icons-material/HourglassTopOutlined';
 type RentalCardProps = {
   category: React.ReactNode;
   image: string;
@@ -65,7 +65,7 @@ export default function RentalCard(props: RentalCardProps) {
             direction="row"
             sx={{ position: 'absolute', top: 0, width: '100%', p: 1 }}
           >
-            {rareFind && (
+            {/* {rareFind && (
               <Chip
                 variant="soft"
                 color="success"
@@ -74,7 +74,7 @@ export default function RentalCard(props: RentalCardProps) {
               >
                 Rare find
               </Chip>
-            )}
+            )} */}
             <IconButton
               variant="plain"
               size="sm"
@@ -87,7 +87,7 @@ export default function RentalCard(props: RentalCardProps) {
                 zIndex: '20',
               }}
             >
-              <FavoriteRoundedIcon />
+              <BookmarkAddOutlinedIcon />
             </IconButton>
           </Stack>
         </AspectRatio>
@@ -122,7 +122,7 @@ export default function RentalCard(props: RentalCardProps) {
               borderRadius: '50%',
             }}
           >
-            <FavoriteRoundedIcon />
+            <BookmarkAddOutlinedIcon />
           </IconButton>
         </Stack>
         <Stack
@@ -132,8 +132,8 @@ export default function RentalCard(props: RentalCardProps) {
           flexWrap="wrap"
           sx={{ my: 0.25 }}
         >
-          <Typography level="body-xs" startDecorator={<FmdGoodRoundedIcon />}>
-            USA
+          <Typography level="body-xs" startDecorator={<HourglassTopOutlinedIcon />}>
+            4 min read
           </Typography>
           <Typography level="body-xs" startDecorator={<SecurityOutlinedIcon />}>
             4 / 10
@@ -143,7 +143,7 @@ export default function RentalCard(props: RentalCardProps) {
           </Typography> */}
         </Stack>
         <Stack direction="row" sx={{ mt: 'auto' }}>
-          <Typography
+          {/* <Typography
             level="title-sm"
             startDecorator={
               <React.Fragment>
@@ -157,7 +157,8 @@ export default function RentalCard(props: RentalCardProps) {
             sx={{ display: 'flex', gap: 1 }}
           >
             3.0
-          </Typography>
+          </Typography> */}
+          <Chip  variant="plain" slotProps={{ action: { component: 'a', href: '#as-link' } }}>Nextjs</Chip>
           {/* <Typography level="title-lg" sx={{ flexGrow: 1, textAlign: 'right' }}>
             <strong>$540</strong> <Typography level="body-md">total</Typography>
           </Typography> */}
