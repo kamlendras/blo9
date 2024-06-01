@@ -17,7 +17,7 @@ export default function OrderSelector() {
         Order by
       </MenuButton>
       <Menu sx={{ minWidth: 120 }}>
-        <MenuItem>Price</MenuItem>
+        <MenuItem>Views</MenuItem>
         <MenuItem>Date</MenuItem>
         <MenuItem>Rating</MenuItem>
       </Menu>

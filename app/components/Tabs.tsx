@@ -82,7 +82,14 @@ export default function TabsPageExample() {
           Hacker Leaks {' '}
            
           </Tab>
-     
+          <Tab indicatorInset sx={{ fontSize: 18 }} >
+          Market Shutdown {' '}
+           
+          </Tab>
+          <Tab indicatorInset sx={{ fontSize: 18 }} >
+          IT {' '}
+           
+          </Tab>
         </TabList>
         <Box
         //   sx={(theme) => ({
@@ -115,6 +122,9 @@ export default function TabsPageExample() {
           <TabPanel value={5}><BlogCard/></TabPanel>
           <TabPanel value={6}><BlogCard/></TabPanel>
           <TabPanel value={7}><BlogCard/></TabPanel>
+          <TabPanel value={8}><BlogCard/></TabPanel>
+          <TabPanel value={9}><BlogCard/></TabPanel>
+          <TabPanel value={10}><BlogCard/></TabPanel>
           </Box>
         </Box>
       </Tabs>

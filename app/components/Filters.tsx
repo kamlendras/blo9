@@ -12,13 +12,17 @@ import Slider, { sliderClasses } from '@mui/joy/Slider';
 import FilterAltOutlined from '@mui/icons-material/FilterAltOutlined';
 import CountrySelector from './CountrySelector';
 import OrderSelector from './OrderSelector';
-
+import CheckIcon from '@mui/icons-material/Check';
+import Checkbox from '@mui/joy/Checkbox';
+import Chip from '@mui/joy/Chip';
+import Typography from '@mui/joy/Typography';
 function valueText(value: number) {
   return `$${value.toLocaleString('en-US')}`;
 }
 
 export default function Filters() {
   const [open, setOpen] = React.useState(false);
+  const [selected, setSelected] = React.useState<string[]>([]);
   return (
     <Stack
       useFlexGap
@@ -42,6 +46,62 @@ export default function Filters() {
           <DialogTitle>Filters</DialogTitle>
           <ModalClose />
           <CountrySelector />
+
+          <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+      <div>
+        <Typography level="title-lg" id="fav-movie" mb={2}>
+          Topics
+        </Typography>
+        <Box
+          role="group"
+          aria-labelledby="fav-movie"
+          sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}
+        >
+          {[
+            'Tor',
+            'Monero',
+            'S',
+            'Eternals',
+            'Shang chi',
+            'Jungle cruise',
+            'No time to die',
+            'Thor',
+            'The hulk',
+          ].map((name) => {
+            const checked = selected.includes(name);
+            return (
+              <Chip
+                key={name}
+                variant="plain"
+                color={checked ? 'primary' : 'neutral'}
+                startDecorator={
+                  checked && <CheckIcon sx={{ zIndex: 1, pointerEvents: 'none' }} />
+                }
+              >
+                <Checkbox
+                  variant="outlined"
+                  color={checked ? 'primary' : 'neutral'}
+                  disableIcon
+                  overlay
+                  label={name}
+                  checked={checked}
+                  onChange={(event) => {
+                    setSelected((names) =>
+                      !event.target.checked
+                        ? names.filter((n) => n !== name)
+                        : [...names, name],
+                    );
+                  }}
+                />
+              </Chip>
+            );
+          })}
+        </Box>
+      </div>
+    </Box>
+
+
+
           <Box
             sx={{
               display: 'grid',
@@ -68,31 +128,8 @@ export default function Filters() {
               aria-label="Date"
             />
           </Box>
-          <FormControl>
-            <FormLabel>Price range</FormLabel>
-            <Slider
-              defaultValue={[2000, 4900]}
-              step={100}
-              min={0}
-              max={10000}
-              getAriaValueText={valueText}
-              valueLabelDisplay="auto"
-              valueLabelFormat={valueText}
-              marks={[
-                { value: 0, label: '$0' },
-                { value: 5000, label: '$5,000' },
-                { value: 10000, label: '$10,000' },
-              ]}
-              sx={{
-                [`& .${sliderClasses.markLabel}[data-index="0"]`]: {
-                  transform: 'none',
-                },
-                [`& .${sliderClasses.markLabel}[data-index="2"]`]: {
-                  transform: 'translateX(-100%)',
-                },
-              }}
-            />
-          </FormControl>
+ 
+           
         </Stack>
       </Drawer>
     </Stack>
