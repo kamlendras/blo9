@@ -55,7 +55,7 @@ export default function RentalCard(props: RentalCardProps) {
           ratio="1"
           flex
           sx={{
-            minWidth: { sm: 120, md: 160 },
+            minWidth: { sm: 220, md: 260 },
             '--AspectRatio-maxHeight': { xs: '160px', sm: '9999px' },
           }}
         >

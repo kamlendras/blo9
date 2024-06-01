@@ -18,8 +18,8 @@ export default function TabsPageExample() {
       }}
     >
       <Tabs
-        aria-label="Scrollable tabs"
-        sx={{ width: 1250 }}
+        // aria-label="Scrollable tabs"
+       
         value={index}
         onChange={(event, value) => setIndex(value as number)}
       >
@@ -92,16 +92,16 @@ export default function TabsPageExample() {
         //     clipPath: 'inset(0 -100vmax)',
 
         //   })}
-        component="main"
-              sx={{
-                flexGrow: 1,
-                height: "100vh",
-                overflow: "auto",
-              }}
+        // component="main"
+              // sx={{
+                // flexGrow: 1,
+                // height: "100vh",
+                // overflow: "auto",
+              // }}
         >
                <Box
               // maxWidth="xl"
-maxWidth="100vw"
+// maxWidth="100vw"
 
 
                sx={{ mt: 2 }}

@@ -12,17 +12,23 @@ export const metadata = {
 export default function C() {
   return (
     <>
-          <Grid container spacing={2} sx={{ flexGrow: 1, mt:1 }}>
-      <Grid xs={8}>
+          <Grid 
+          container
+          spacing={2} 
+         
+           sx={{ flexGrow: 1, mt:1 }}
+          >
+      <Grid disableEqualOverflow xs={9}>
       <Tabs />
       </Grid>
-      <Grid sx={{p: 0.5}} xs={4}>
+      <Grid disableEqualOverflow  xs={3}>
         <Picks/>
         <Card/>
         <Chip/>
       <Follow/>
       <Footer/>
       </Grid>
+
     </Grid>
       
       

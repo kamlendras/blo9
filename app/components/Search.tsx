@@ -9,11 +9,19 @@ import Typography from "@mui/joy/Typography";
 export default function Search() {
   return (
     <div>
-      <Stack spacing={1} direction="row" sx={{ mb: 2 }}>
+      <Stack
+      
+      useFlexGap
+      justifyContent={{ xs: 'space-between' }}
+      flexWrap="wrap"
+      sx={{ minWidth: 0 }}
+      spacing={1} direction="row" 
+      // sx={{ mb: 2 }}
+      >
         <FormControl sx={{ flex: 1 }}>
           <Input
             placeholder="Search"
-            value={"Melbourne"}
+            value={"Search Anything...."}
             startDecorator={<SearchRoundedIcon />}
             aria-label="Search"
           />
