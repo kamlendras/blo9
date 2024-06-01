@@ -16,7 +16,7 @@ export default function C() {
       <Grid xs={8}>
       <Tabs />
       </Grid>
-      <Grid xs={4}>
+      <Grid sx={{p: 0.5}} xs={4}>
         <Picks/>
         <Card/>
         <Chip/>

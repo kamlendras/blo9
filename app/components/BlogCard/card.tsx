@@ -3,7 +3,7 @@ import { CssVarsProvider } from "@mui/joy/styles";
 import CssBaseline from "@mui/joy/CssBaseline";
 import Box from "@mui/joy/Box";
 import Stack from "@mui/joy/Stack";
-
+import Typography from '@mui/joy/Typography';
 // import NavBar from './components/NavBar';
 import RentalCard from "./RentalCard";
 // import HeaderSection from "./components/HeaderSection";
@@ -51,9 +51,14 @@ export default function RentalDashboard() {
           {/* <Filters /> */}
           <Stack spacing={2} sx={{ overflow: "auto" }}>
             <RentalCard
-              title="A Stylish Apt, 5 min walk to Queen Victoria Market"
-              category="Entire apartment rental in Collingwood"
-              rareFind
+              title="5 Tips and Tricks To Make Your Life With Next.js 14 Easier"
+              category="Devon Wijesinghe
+
+              ·Mar 25, 2024
+              
+              "
+              
+              
               image="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=400"
             />
             <RentalCard

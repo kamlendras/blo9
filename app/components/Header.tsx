@@ -4,7 +4,7 @@ import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import SignalCellularAltOutlinedIcon from '@mui/icons-material/SignalCellularAltOutlined';
-
+import Filters from "./Filters"
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import DrawOutlinedIcon from '@mui/icons-material/DrawOutlined';
 import { useColorScheme } from '@mui/joy/styles';
@@ -35,39 +35,40 @@ import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-
+import Search from "./Search"
+import ColorSchemeToggle from './ColorSchemeToggle';
 // import Navigation from './Navigation';
 
-function ColorSchemeToggle() {
-  // const { mode, setMode } = useColorScheme();
-  const [mounted, setMounted] = React.useState(false);
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-  if (!mounted) {
-    return <IconButton size="sm" variant="outlined" color="primary" />;
-  }
-  return (
-    <Tooltip title="Change theme" variant="outlined">
-      <IconButton
-        id="toggle-mode"
-        size="sm"
-        variant="plain"
-        color="neutral"
-        sx={{ alignSelf: 'center' }}
-        onClick={() => {
-          if (mode === 'light') {
-            setMode('dark');
-          } else {
-            setMode('light');
-          }
-        }}
-      >
-        {/* {mode === 'light' ? <DarkModeRoundedIcon /> : <LightModeRoundedIcon />} */}
-      </IconButton>
-    </Tooltip>
-  );
-}
+// function ColorSchemeToggle() {
+//   // const { mode, setMode } = useColorScheme();
+//   const [mounted, setMounted] = React.useState(false);
+//   React.useEffect(() => {
+//     setMounted(true);
+//   }, []);
+//   if (!mounted) {
+//     return <IconButton size="sm" variant="outlined" color="primary" />;
+//   }
+//   return (
+//     <Tooltip title="Change theme" variant="outlined">
+//       <IconButton
+//         id="toggle-mode"
+//         size="sm"
+//         variant="plain"
+//         color="neutral"
+//         sx={{ alignSelf: 'center' }}
+//         onClick={() => {
+//           if (mode === 'light') {
+//             setMode('dark');
+//           } else {
+//             setMode('light');
+//           }
+//         }}
+//       >
+//         {/* {mode === 'light' ? <DarkModeRoundedIcon /> : <LightModeRoundedIcon />} */}
+//       </IconButton>
+//     </Tooltip>
+//   );
+// }
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
@@ -95,7 +96,7 @@ export default function Header() {
             borderRadius: '50%',
           }}
         > */}
-       <img src="./icon.png"  width="100" height="50"/>
+       <img src="/250x100.png"  width={169} height={67.6}/>
         {/* </IconButton> */}
         {/* <Button
           variant="plain"
@@ -154,45 +155,15 @@ export default function Header() {
           alignItems: 'center',
         }}
       >
-        <Input
-          size="sm"
-          variant="outlined"
-          placeholder="Search anything…"
-          startDecorator={<SearchRoundedIcon color="primary" />}
-          endDecorator={
-            <IconButton
-              variant="outlined"
-              color="neutral"
-              sx={{ bgcolor: 'background.level1' }}
-            >
-              <Typography level="title-sm" textColor="text.icon">
-                ⌘ K
-              </Typography>
-            </IconButton>
-          }
-          sx={{
-            alignSelf: 'center',
-            display: {
-              xs: 'none',
-              sm: 'flex',
-            },
-          }}
-        />
-        <IconButton
-          size="sm"
-          variant="outlined"
-          color="neutral"
-          sx={{ display: { xs: 'inline-flex', sm: 'none' }, alignSelf: 'center' }}
-        >
-          <SearchRoundedIcon />
-        </IconButton>
+        <Search/>
+        <Filters />
         
           <IconButton
             size="sm"
             variant="plain"
             color="neutral"
             component="a"
-            href="/blog/first-look-at-joy/"
+            href="/write"
             sx={{ alignSelf: 'center' }}
           >
 

@@ -18,7 +18,7 @@ export default function CardVariants() {
     >
      
 
-      <Card variant="solid">
+      <Card variant="solid" color="primary" invertedColors>
         <CardContent>
           <Typography level="title-sm" textColor="inherit">
           Writing on Blo9
