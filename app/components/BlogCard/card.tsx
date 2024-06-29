@@ -13,7 +13,7 @@ export default function RentalDashboard() {
       <CssBaseline />
       <Box
         component="main"
-        // sx={{
+        // sx={
         //   height: "calc(100vh - 55px)", // 55px is the height of the NavBar
         //   display: "grid",
         //   gridTemplateColumns: { xs: "auto", md: "60% 40%" },
